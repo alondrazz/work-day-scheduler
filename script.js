@@ -1,9 +1,9 @@
 
   // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
   // the code isn't run until the browser has finished rendering all the elements
-  // in the html.
+  // in the html.Add a listener for click events on the save button.
 $(document).ready(function() {
-  // TODO: Add a listener for click events on the save button.
+  
   const containerText = $('.p-5');
   const saveButton = $('.saveBtn');
   const agendaText = $('#agenda-notice');
@@ -23,7 +23,7 @@ $(document).ready(function() {
     console.log('Container element not found.');
   }
 
-  // TODO: Add code to apply the past, present, or future class to each time
+  // Add code to apply the past, present, or future class to each time
   // block by comparing the id to the current hour.
     const currentHour = dayjs().hour();
   
@@ -40,7 +40,7 @@ $(document).ready(function() {
       }
   });
 
-  // TODO: Add code to get any user input that was saved in localStorage and set
+  // Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. 
 
   function saveUserInput(key, value) {
@@ -63,7 +63,7 @@ $(document).ready(function() {
   }
   updateTextareas();
 
-  // TODO: Add code to display the current date in the header of the page.
+  // Add code to display the current date in the header of the page.
 
   const currentElement = $('#currentDay');
   const today = dayjs();
