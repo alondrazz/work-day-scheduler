@@ -3,13 +3,7 @@
   // the code isn't run until the browser has finished rendering all the elements
   // in the html.
 $(document).ready(function() {
-  // TODO: Add a listener for click events on the save button. This code should
-  // use the id in the containing time-block as a key to save the user input in
-  // local storage. HINT: What does `this` reference in the click listener
-  // function? How can DOM traversal be used to get the "hour-x" id of the
-  // time-block containing the button that was clicked? How might the id be
-  // useful when saving the description in local storage?
-  //container-fluid px-5 <button class="btn saveBtn col-2
+  // TODO: Add a listener for click events on the save button.
   const containerText = $('.p-5');
   const saveButton = $('.saveBtn');
   const agendaText = $('#agenda-notice');
@@ -23,9 +17,6 @@ $(document).ready(function() {
     console.log($(this).siblings("textarea").val())
   });
 
-  
-  
-  
   if (containerText.length > 0) {
     console.log('Found containerText element:', containerText);
   } else {
@@ -33,11 +24,7 @@ $(document).ready(function() {
   }
 
   // TODO: Add code to apply the past, present, or future class to each time
-  // block by comparing the id to the current hour. HINTS: How can the id
-  // attribute of each time-block be used to conditionally add or remove the
-  // past, present, and future classes? How can Day.js be used to get the
-  // current hour in 24-hour time?
-  
+  // block by comparing the id to the current hour.
     const currentHour = dayjs().hour();
   
     $('.time-block').each(function() {
@@ -54,9 +41,8 @@ $(document).ready(function() {
   });
 
   // TODO: Add code to get any user input that was saved in localStorage and set
-  // the values of the corresponding textarea elements. HINT: How can the id
-  // attribute of each time-block be used to do this?
-  //
+  // the values of the corresponding textarea elements. 
+
   function saveUserInput(key, value) {
     localStorage.setItem(key, value);
   }
